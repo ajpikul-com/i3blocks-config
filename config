@@ -1,0 +1,28 @@
+separator_block_width=15
+markup=none
+# Date Time
+#
+[keyboard]
+command=/home/ajp/.config/i3blocks/i3blocks-contrib/keyboard_layout/keyboard_layout
+interval=once
+signal=10
+
+#if you prefer automatic updating
+[volume-pipewire]
+command=/home/ajp/.config/i3blocks/i3blocks-contrib/volume-pipewire/volume-pipewire
+interval=persist
+SUBSCRIBE=1
+
+[brightness]
+command=/home/ajp/.config/i3blocks/i3blocks-contrib/brightness/bin/brightness -a /sys/class/backlight/amdgpu_bl0/actual_brightness -m /sys/class/backlight/amdgpu_bl0/max_brightness
+interval=persist
+
+[battery]
+command=/home/ajp/.config/i3blocks/i3blocks-contrib/battery/battery
+interval=2
+LABEL=⚡
+
+[time]
+command=echo "⏳$(date '+%Y-%m-%d %H:%M:%S')"
+interval=2
+

@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+lang=$(xkblayout-state print '%s')
+
+if [ "$lang" = "us" ]; then
+	echo 🇺🇸
+elif [ "$lang" = "br" ]; then
+	echo 🇧🇷 
+elif [ "$lang" = "es" ]; then
+	echo 󾓫 
+elif [ "$lang" = "latam" ]; then
+	echo 🇨🇴
+else
+	echo $lang
+fi
+
